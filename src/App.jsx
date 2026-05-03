@@ -70,7 +70,7 @@ function App() {
   const [showWelcome, setShowWelcome] = useState(true);
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/Stackfolio/">
       <Routes>
         <Route
           path="/"
