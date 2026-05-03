@@ -1,3 +1,5 @@
+const baseUrl = import.meta.env.BASE_URL || "/";
+
 // Projects data from resume
 export const projects = [
   {
@@ -6,7 +8,7 @@ export const projects = [
     Description:
       "A machine learning model for real-time digit recognition using Python. Optimized preprocessing and inference pipeline for fast and accurate predictions. Designed for real-world automation use cases including banking and logistics systems.",
     TechStack: ["Python", "Machine Learning", "NumPy", "Scikit-learn"],
-    Img: "/project-digit.png",
+    Img: `${baseUrl}project-digit.png`,
     Link: "https://github.com/RPR143/Handwritten-Digit-Recognition-System-",
     Github: "https://github.com/RPR143/Handwritten-Digit-Recognition-System-",
   },
@@ -16,7 +18,7 @@ export const projects = [
     Description:
       "A full-stack web platform promoting sustainable living practices. Features user authentication, personalized dashboards, and interactive UI. Created an analytics-driven dashboard to encourage data-informed decision-making.",
     TechStack: ["React.js", "Node.js", "MongoDB", "RESTful APIs"],
-    Img: "/project-coexist.png",
+    Img: `${baseUrl}project-coexist.png`,
     Link: "https://github.com/RPR143/The-Co-Exist",
     Github: "https://github.com/RPR143/The-Co-Exist",
   },
@@ -29,5 +31,5 @@ export const certificates = certificateFiles.map((filename, index) => ({
   id: `cert-${index}`,
   Title: `Professional Certificate ${index + 1}`,
   Issuer: "Verified Issuer",
-  Img: `/certificates/${filename}`,
+  Img: `${baseUrl}certificates/${filename}`,
 }));
