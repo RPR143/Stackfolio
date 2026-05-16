@@ -34,27 +34,11 @@ const calculateExperienceDuration = (dateString) => {
 const experienceData = [
   {
     id: "01",
-    year: "19 January 2026 - Present",
-    duration: calculateExperienceDuration("19 January 2026 - Present"),
-    title: "Apprentice",
-    institution: "American Express",
-    description: "Working on scalable web applications and RESTful APIs using Java, React.js, and Node.js. Contributing to agile development and customer-facing interfaces.",
-  },
-  {
-    id: "02",
-    year: "9 January 2025 - 19 November 2025",
-    duration: calculateExperienceDuration("9 January 2025 - 19 November 2025"),
-    title: "Frontend Developer",
+    year: "June 2025 - December 2025",
+    duration: "6 months",
+    title: "Frontend Developer Intern",
     institution: "Indian Infotech",
-    description: "Developed and optimized responsive user interfaces using React.js and modern CSS frameworks. Improved application performance and collaborated with design teams.",
-  },
-  {
-    id: "03",
-    year: "10 April 2022 - 10 June 2022",
-    duration: calculateExperienceDuration("10 April 2022 - 10 June 2022"),
-    title: "Artificial Intelligence Intern",
-    institution: "Acmegrade",
-    description: "Assisted in training and evaluating machine learning models. Built data preprocessing pipelines using Python and pandas for computer vision and NLP tasks.",
+    description: "Designed and developed responsive web applications using React.js. Built reusable UI components, optimized performance, and integrated frontend interfaces with RESTful APIs in an agile team.",
   }
 ];
 
@@ -62,27 +46,27 @@ const experienceData = [
 const educationData = [
   {
     id: "01",
-    year: "2020 - 2024",
+    year: "July 2022 - June 2026",
     duration: "4 yrs",
-    title: "B.Tech in Computer Science",
-    institution: "UCEM Allahabad",
-    description: "Graduated with a CGPA of 7.99/10. Built a strong foundation in data structures, algorithms, and software engineering principles.",
+    title: "B.Tech in Computer Science and Engineering",
+    institution: "United College of Engineering and Research",
+    description: "Currently pursuing B.Tech with a percentage of 78.9%. Built a strong foundation in data structures, algorithms, and software engineering principles.",
   },
   {
     id: "02",
-    year: "2019 - 2020",
+    year: "April 2021 - April 2022",
     duration: "1 yr",
-    title: "Higher Secondary (12th)",
-    institution: "Central Board of Secondary Education",
-    description: "Completed with 80.4% aggregate. Focused on Physics, Chemistry, Mathematics, and Computer Science.",
+    title: "Intermediate (CBSE)",
+    institution: "Central Academy School",
+    description: "Completed with 88.8% aggregate. Focused on core science subjects.",
   },
   {
     id: "03",
-    year: "2017 - 2018",
+    year: "April 2019 - April 2020",
     duration: "1 yr",
-    title: "Secondary (10th)",
-    institution: "Central Board of Secondary Education",
-    description: "Completed with 75.6% aggregate. Built a strong academic foundation.",
+    title: "High School (CBSE)",
+    institution: "Central Academy School",
+    description: "Completed with 80.16% aggregate. Built a strong academic foundation.",
   }
 ];
 

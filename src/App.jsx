@@ -36,7 +36,7 @@ const LandingPage = ({ showWelcome, setShowWelcome }) => {
               <span className="block text-sm pb-4 text-gray-500 text-center dark:text-gray-400">
                 © {new Date().getFullYear()}{" "}
                 <span className="bg-gradient-to-r from-[#0ea5e9] to-[#06b6d4] bg-clip-text text-transparent font-semibold">
-                  Rohit Pandey
+                  Nishant Pandey
                 </span>
                 . All Rights Reserved.
               </span>
@@ -57,7 +57,7 @@ const ProjectPageLayout = () => (
         <span className="block text-sm pb-4 text-gray-500 text-center dark:text-gray-400">
           © {new Date().getFullYear()}{" "}
           <span className="bg-gradient-to-r from-[#0ea5e9] to-[#06b6d4] bg-clip-text text-transparent font-semibold">
-            Rohit Pandey
+            Nishant Pandey
           </span>
           . All Rights Reserved.
         </span>

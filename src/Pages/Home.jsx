@@ -93,11 +93,11 @@ const SocialLink = memo(({ icon: Icon, link, label }) => (
 const TYPING_SPEED = 100;
 const ERASING_SPEED = 50;
 const PAUSE_DURATION = 2000;
-const WORDS = ["Full Stack Developer", "Java Developer", "React.js Enthusiast", "Problem Solver"];
-const TECH_STACK = ["Java", "React.js", "Node.js", "Python", "SQL"];
+const WORDS = ["Software Engineer", "Frontend Developer", "React.js Enthusiast", "Problem Solver"];
+const TECH_STACK = ["Java", "React.js", "Node.js", "Python", "MySQL"];
 const SOCIAL_LINKS = [
-  { icon: Github, link: "https://github.com/RPR143", label: "GitHub" },
-  { icon: Linkedin, link: "https://www.linkedin.com/in/rohit-pandey143/", label: "LinkedIn" },
+  { icon: Github, link: "https://github.com/Nishant-coder425", label: "GitHub" },
+  { icon: Linkedin, link: "https://linkedin.com/in/nishant-pandey425/", label: "LinkedIn" },
 ];
 
 const Home = () => {
@@ -189,7 +189,7 @@ const Home = () => {
                   <p className="text-xl md:text-2xl text-gray-300 font-semibold">
                     Hi, I'm{" "}
                     <span className="bg-gradient-to-r from-[#0ea5e9] to-[#06b6d4] bg-clip-text text-transparent">
-                      Rohit Pandey
+                      Nishant Pandey
                     </span>
                   </p>
                 </div>
@@ -212,9 +212,9 @@ const Home = () => {
                   data-aos="fade-up"
                   data-aos-delay="1000"
                 >
-                  Apprentice at American Express — building scalable, reliable web applications
-                  with Java, React.js, and Node.js. Passionate about clean code,
-                  APIs, and delivering great user experiences.
+                  Results-driven Software Engineer with hands-on expertise in end-to-end web applications 
+                  using React.js, Node.js, and Core Java. Skilled in optimizing database architectures, 
+                  DSA, and Agile team collaboration.
                 </p>
 
                 {/* Tech Stack */}

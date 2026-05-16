@@ -172,7 +172,7 @@ const WelcomeScreen = ({ onLoadingComplete }) => {
                   <div className="relative flex items-center gap-2 text-lg sm:text-xl md:text-2xl">
                     <Globe className="w-4 h-4 sm:w-5 sm:h-5 text-sky-400" />
                     <span className="bg-gradient-to-r from-sky-500 to-cyan-500 bg-clip-text text-transparent font-semibold">
-                      <TypewriterEffect text="Rohit Pandey" />
+                      <TypewriterEffect text="Nishant Pandey" />
                     </span>
                   </div>
                 </div>

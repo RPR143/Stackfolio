@@ -48,8 +48,8 @@ const ProfileImage = memo(() => (
           <div className="absolute inset-0 bg-gradient-to-t from-cyan-500/20 via-transparent to-sky-500/20 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-700 hidden sm:block" />
 
           <img
-            src={`${import.meta.env.BASE_URL}rohit-profile.png`}
-            alt="Rohit Pandey - Full Stack Developer"
+            src={`${import.meta.env.BASE_URL}nishant-profile.jpeg`}
+            alt="Nishant Pandey - Software Engineer"
             className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:rotate-2"
             loading="lazy"
           />
@@ -119,7 +119,7 @@ const AboutPage = () => {
       {
         icon: Code,
         color: "from-[#0ea5e9] to-[#06b6d4]",
-        value: "2",
+        value: "3",
         label: "Total Projects",
         description: "Innovative web & ML solutions crafted",
         animation: "fade-right",
@@ -127,7 +127,7 @@ const AboutPage = () => {
       {
         icon: Award,
         color: "from-[#06b6d4] to-[#0ea5e9]",
-        value: "30+",
+        value: "8",
         label: "Certificates",
         description: "Professional skills validated",
         animation: "fade-up",
@@ -135,7 +135,7 @@ const AboutPage = () => {
       {
         icon: Globe,
         color: "from-[#0ea5e9] to-[#06b6d4]",
-        value: "1.3+",
+        value: "0.5+",
         label: "Years Experience",
         description: "Continuous learning & growth",
         animation: "fade-left",
@@ -182,7 +182,7 @@ const AboutPage = () => {
                 data-aos="fade-right"
                 data-aos-duration="1300"
               >
-                Rohit Pandey
+                Nishant Pandey
               </span>
             </h2>
 
@@ -191,18 +191,16 @@ const AboutPage = () => {
               data-aos="fade-right"
               data-aos-duration="1500"
             >
-              I am a passionate Software Developer currently working as an Apprentice at{" "}
-              <span className="text-cyan-400 font-semibold">American Express</span>. With a strong
-              foundation in Java, React.js, Python, and Node.js, I specialize in building scalable web applications,
-              developing robust RESTful APIs, and creating intuitive user experiences. My expertise spans both frontend
-              and backend development, utilizing tools like Spring Boot, Express, MongoDB, and SQL. I thrive in agile
+              I am a passionate Software Engineer with hands-on expertise in developing end-to-end web applications. 
+              With a strong foundation in <span className="text-cyan-400 font-semibold">Java, React.js, Node.js, and Python</span>, 
+              I specialize in building scalable web applications and optimizing database architectures. I thrive in agile
               environments where continuous learning and problem-solving drive meaningful impact.
             </p>
 
             <div className="flex flex-col lg:flex-row items-center lg:items-start gap-4 lg:gap-4 lg:px-0 w-full">
               <a
-                href={`${import.meta.env.BASE_URL}rohit-resume.pdf`}
-                download="rohit-resume.pdf"
+                href={`${import.meta.env.BASE_URL}Nishant_Pandey_425.pdf`}
+                download="Nishant_Pandey_425.pdf"
                 className="w-full lg:w-auto"
               >
                 <button
