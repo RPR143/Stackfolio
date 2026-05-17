@@ -44,12 +44,12 @@ const AnimatedBackground = () => {
         {/* Blob 1 — Sky Blue */}
         <div
           ref={(ref) => (blobRefs.current[0] = ref)}
-          className="absolute top-0 -left-4 md:w-96 md:h-96 w-72 h-72 bg-sky-500 rounded-full mix-blend-screen filter blur-[128px] opacity-30 md:opacity-15"
+          className="absolute top-0 -left-4 md:w-96 md:h-96 w-72 h-72 bg-violet-500 rounded-full mix-blend-screen filter blur-[128px] opacity-30 md:opacity-15"
         />
         {/* Blob 2 — Cyan */}
         <div
           ref={(ref) => (blobRefs.current[1] = ref)}
-          className="absolute top-0 -right-4 w-96 h-96 bg-cyan-500 rounded-full mix-blend-screen filter blur-[128px] opacity-30 md:opacity-15 hidden sm:block"
+          className="absolute top-0 -right-4 w-96 h-96 bg-fuchsia-500 rounded-full mix-blend-screen filter blur-[128px] opacity-30 md:opacity-15 hidden sm:block"
         />
         {/* Blob 3 — Teal/Blue */}
         <div
@@ -59,11 +59,11 @@ const AnimatedBackground = () => {
         {/* Blob 4 — Sky */}
         <div
           ref={(ref) => (blobRefs.current[3] = ref)}
-          className="absolute -bottom-10 right-20 w-96 h-96 bg-sky-400 rounded-full mix-blend-screen filter blur-[128px] opacity-15 md:opacity-8 hidden sm:block"
+          className="absolute -bottom-10 right-20 w-96 h-96 bg-violet-400 rounded-full mix-blend-screen filter blur-[128px] opacity-15 md:opacity-8 hidden sm:block"
         />
       </div>
       {/* Subtle grid overlay */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#0ea5e908_1px,transparent_1px),linear-gradient(to_bottom,#0ea5e908_1px,transparent_1px)] bg-[size:32px_32px]" />
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#8b5cf608_1px,transparent_1px),linear-gradient(to_bottom,#8b5cf608_1px,transparent_1px)] bg-[size:32px_32px]" />
     </div>
   );
 };

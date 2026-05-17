@@ -14,7 +14,7 @@ const Header = memo(() => (
   <div className="text-center lg:mb-8 mb-2 px-[5%]">
     <div className="inline-block relative group">
       <h2
-        className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#0ea5e9] to-[#06b6d4]"
+        className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#8b5cf6] to-[#d946ef]"
         data-aos="zoom-in-up"
         data-aos-duration="600"
       >
@@ -26,9 +26,9 @@ const Header = memo(() => (
       data-aos="zoom-in-up"
       data-aos-duration="800"
     >
-      <Sparkles className="w-5 h-5 text-cyan-400" />
+      <Sparkles className="w-5 h-5 text-fuchsia-400" />
       Building scalable solutions with clean, purposeful code
-      <Sparkles className="w-5 h-5 text-cyan-400" />
+      <Sparkles className="w-5 h-5 text-fuchsia-400" />
     </p>
   </div>
 ));
@@ -37,15 +37,15 @@ const ProfileImage = memo(() => (
   <div className="flex justify-end items-center sm:p-12 sm:py-0 sm:pb-0 p-0 py-2 pb-2">
     <div className="relative group" data-aos="fade-up" data-aos-duration="1000">
       <div className="absolute -inset-6 opacity-[25%] z-0 hidden sm:block">
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-600 via-sky-500 to-blue-600 rounded-full blur-2xl animate-spin-slower" />
-        <div className="absolute inset-0 bg-gradient-to-l from-teal-500 via-cyan-500 to-sky-600 rounded-full blur-2xl animate-pulse-slow opacity-50" />
-        <div className="absolute inset-0 bg-gradient-to-t from-blue-600 via-sky-500 to-cyan-400 rounded-full blur-2xl animate-float opacity-50" />
+        <div className="absolute inset-0 bg-gradient-to-r from-fuchsia-600 via-violet-500 to-pink-600 rounded-full blur-2xl animate-spin-slower" />
+        <div className="absolute inset-0 bg-gradient-to-l from-rose-500 via-fuchsia-500 to-violet-600 rounded-full blur-2xl animate-pulse-slow opacity-50" />
+        <div className="absolute inset-0 bg-gradient-to-t from-pink-600 via-violet-500 to-fuchsia-400 rounded-full blur-2xl animate-float opacity-50" />
       </div>
       <div className="relative">
         <div className="w-72 h-72 sm:w-80 sm:h-80 rounded-full overflow-hidden shadow-[0_0_40px_rgba(14,165,233,0.3)] transform transition-all duration-700 group-hover:scale-105">
           <div className="absolute inset-0 border-4 border-white/20 rounded-full z-20 transition-all duration-700 group-hover:border-white/40 group-hover:scale-105" />
           <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/40 z-10 transition-opacity duration-700 group-hover:opacity-0 hidden sm:block" />
-          <div className="absolute inset-0 bg-gradient-to-t from-cyan-500/20 via-transparent to-sky-500/20 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-700 hidden sm:block" />
+          <div className="absolute inset-0 bg-gradient-to-t from-fuchsia-500/20 via-transparent to-violet-500/20 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-700 hidden sm:block" />
 
           <img
             src={`${import.meta.env.BASE_URL}nishant-profile.jpeg`}
@@ -118,7 +118,7 @@ const AboutPage = () => {
     () => [
       {
         icon: Code,
-        color: "from-[#0ea5e9] to-[#06b6d4]",
+        color: "from-[#8b5cf6] to-[#d946ef]",
         value: "3",
         label: "Total Projects",
         description: "Innovative web & ML solutions crafted",
@@ -126,7 +126,7 @@ const AboutPage = () => {
       },
       {
         icon: Award,
-        color: "from-[#06b6d4] to-[#0ea5e9]",
+        color: "from-[#d946ef] to-[#8b5cf6]",
         value: "8",
         label: "Certificates",
         description: "Professional skills validated",
@@ -134,7 +134,7 @@ const AboutPage = () => {
       },
       {
         icon: Globe,
-        color: "from-[#0ea5e9] to-[#06b6d4]",
+        color: "from-[#8b5cf6] to-[#d946ef]",
         value: "0.5+",
         label: "Years Experience",
         description: "Continuous learning & growth",
@@ -174,7 +174,7 @@ const AboutPage = () => {
               data-aos="fade-right"
               data-aos-duration="1000"
             >
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0ea5e9] to-[#06b6d4]">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#8b5cf6] to-[#d946ef]">
                 Hello, I'm
               </span>
               <span
@@ -192,7 +192,7 @@ const AboutPage = () => {
               data-aos-duration="1500"
             >
               I am a passionate Software Engineer with hands-on expertise in developing end-to-end web applications. 
-              With a strong foundation in <span className="text-cyan-400 font-semibold">Java, React.js, Node.js, and Python</span>, 
+              With a strong foundation in <span className="text-fuchsia-400 font-semibold">Java, React.js, Node.js, and Python</span>, 
               I specialize in building scalable web applications and optimizing database architectures. I thrive in agile
               environments where continuous learning and problem-solving drive meaningful impact.
             </p>
@@ -206,7 +206,7 @@ const AboutPage = () => {
                 <button
                   data-aos="fade-up"
                   data-aos-duration="800"
-                  className="w-full lg:w-auto sm:px-6 py-2 sm:py-3 rounded-lg bg-gradient-to-r from-[#0ea5e9] to-[#06b6d4] text-white font-medium transition-all duration-300 hover:scale-105 flex items-center justify-center lg:justify-start gap-2 shadow-lg hover:shadow-xl animate-bounce-slow"
+                  className="w-full lg:w-auto sm:px-6 py-2 sm:py-3 rounded-lg bg-gradient-to-r from-[#8b5cf6] to-[#d946ef] text-white font-medium transition-all duration-300 hover:scale-105 flex items-center justify-center lg:justify-start gap-2 shadow-lg hover:shadow-xl animate-bounce-slow"
                 >
                   <FileText className="w-4 h-4 sm:w-5 sm:h-5" /> Download Resume
                 </button>
@@ -215,7 +215,7 @@ const AboutPage = () => {
                 <button
                   data-aos="fade-up"
                   data-aos-duration="1000"
-                  className="w-full lg:w-auto sm:px-6 py-2 sm:py-3 rounded-lg border border-[#06b6d4]/50 text-[#06b6d4] font-medium transition-all duration-300 hover:scale-105 flex items-center justify-center lg:justify-start gap-2 hover:bg-[#06b6d4]/10 animate-bounce-slow delay-200"
+                  className="w-full lg:w-auto sm:px-6 py-2 sm:py-3 rounded-lg border border-[#d946ef]/50 text-[#d946ef] font-medium transition-all duration-300 hover:scale-105 flex items-center justify-center lg:justify-start gap-2 hover:bg-[#d946ef]/10 animate-bounce-slow delay-200"
                 >
                   <Code className="w-4 h-4 sm:w-5 sm:h-5" /> View Projects
                 </button>

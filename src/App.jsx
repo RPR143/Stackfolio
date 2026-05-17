@@ -35,7 +35,7 @@ const LandingPage = ({ showWelcome, setShowWelcome }) => {
               <hr className="my-3 border-gray-400 opacity-15 sm:mx-auto lg:my-6 text-center" />
               <span className="block text-sm pb-4 text-gray-500 text-center dark:text-gray-400">
                 © {new Date().getFullYear()}{" "}
-                <span className="bg-gradient-to-r from-[#0ea5e9] to-[#06b6d4] bg-clip-text text-transparent font-semibold">
+                <span className="bg-gradient-to-r from-[#8b5cf6] to-[#d946ef] bg-clip-text text-transparent font-semibold">
                   Nishant Pandey
                 </span>
                 . All Rights Reserved.
@@ -56,7 +56,7 @@ const ProjectPageLayout = () => (
         <hr className="my-3 border-gray-400 opacity-15 sm:mx-auto lg:my-6 text-center" />
         <span className="block text-sm pb-4 text-gray-500 text-center dark:text-gray-400">
           © {new Date().getFullYear()}{" "}
-          <span className="bg-gradient-to-r from-[#0ea5e9] to-[#06b6d4] bg-clip-text text-transparent font-semibold">
+          <span className="bg-gradient-to-r from-[#8b5cf6] to-[#d946ef] bg-clip-text text-transparent font-semibold">
             Nishant Pandey
           </span>
           . All Rights Reserved.

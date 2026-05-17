@@ -4,8 +4,8 @@ import { Github } from "lucide-react";
 const CardProject = ({ Img, Title, Description, Link: ProjectLink, Github: GithubLink, id }) => {
   return (
     <div className="group relative w-full h-full flex">
-      <div className="relative overflow-hidden rounded-xl bg-gradient-to-br from-slate-900/90 to-slate-800/90 backdrop-blur-lg border border-white/10 shadow-2xl transition-all duration-300 hover:shadow-sky-500/20 hover:border-sky-500/20 w-full flex flex-col">
-        <div className="absolute inset-0 bg-gradient-to-br from-sky-500/5 via-cyan-500/5 to-teal-500/5 opacity-50 group-hover:opacity-80 transition-opacity duration-300"></div>
+      <div className="relative overflow-hidden rounded-xl bg-gradient-to-br from-slate-900/90 to-slate-800/90 backdrop-blur-lg border border-white/10 shadow-2xl transition-all duration-300 hover:shadow-violet-500/20 hover:border-violet-500/20 w-full flex flex-col">
+        <div className="absolute inset-0 bg-gradient-to-br from-violet-500/5 via-fuchsia-500/5 to-rose-500/5 opacity-50 group-hover:opacity-80 transition-opacity duration-300"></div>
 
         <div className="relative p-5 z-10 flex flex-col flex-grow">
           {/* Project Image */}
@@ -23,7 +23,7 @@ const CardProject = ({ Img, Title, Description, Link: ProjectLink, Github: Githu
           </div>
 
           <div className="mt-4 flex flex-col flex-grow">
-            <h3 className="text-xl font-semibold bg-gradient-to-r from-sky-200 via-cyan-200 to-teal-200 bg-clip-text text-transparent mb-3">
+            <h3 className="text-xl font-semibold bg-gradient-to-r from-sky-200 via-purple-200 to-teal-200 bg-clip-text text-transparent mb-3">
               {Title}
             </h3>
 
@@ -50,7 +50,7 @@ const CardProject = ({ Img, Title, Description, Link: ProjectLink, Github: Githu
             </div>
           </div>
 
-          <div className="absolute inset-0 border border-white/0 group-hover:border-sky-500/30 rounded-xl transition-colors duration-300 -z-50"></div>
+          <div className="absolute inset-0 border border-white/0 group-hover:border-violet-500/30 rounded-xl transition-colors duration-300 -z-50"></div>
         </div>
       </div>
     </div>

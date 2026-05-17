@@ -17,11 +17,11 @@ const Certificate = ({ ImgSertif, title, issuer }) => {
 
   const FallbackCard = () => (
     <div
-      className="w-full h-[240px] rounded-xl overflow-hidden border border-white/10 bg-gradient-to-br from-slate-800/80 to-slate-900/80 p-6 flex flex-col gap-3 cursor-pointer hover:border-sky-500/40 hover:shadow-lg hover:shadow-sky-500/10 transition-all duration-300 hover:-translate-y-1 group"
+      className="w-full h-[240px] rounded-xl overflow-hidden border border-white/10 bg-gradient-to-br from-slate-800/80 to-slate-900/80 p-6 flex flex-col gap-3 cursor-pointer hover:border-violet-500/40 hover:shadow-lg hover:shadow-violet-500/10 transition-all duration-300 hover:-translate-y-1 group"
       onClick={() => setOpen(true)}
     >
-      <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-sky-500/20 to-cyan-500/20 flex items-center justify-center border border-sky-500/20 group-hover:scale-110 transition-transform duration-300">
-        <svg className="w-6 h-6 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-violet-500/20 to-fuchsia-500/20 flex items-center justify-center border border-violet-500/20 group-hover:scale-110 transition-transform duration-300">
+        <svg className="w-6 h-6 text-violet-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
         </svg>
       </div>
@@ -30,7 +30,7 @@ const Certificate = ({ ImgSertif, title, issuer }) => {
         <p className="text-gray-400 text-xs mt-1">{issuer || "Professional Certification"}</p>
       </div>
       <div className="mt-auto pt-2 border-t border-white/5">
-        <span className="text-xs text-sky-400 font-medium flex items-center gap-1">
+        <span className="text-xs text-violet-400 font-medium flex items-center gap-1">
           <FullscreenIcon sx={{ fontSize: 14 }} />
           View Details
         </span>
@@ -54,8 +54,8 @@ const Certificate = ({ ImgSertif, title, issuer }) => {
               position: "relative",
               maxWidth: "500px",
               width: "90%",
-              bgcolor: "rgba(2, 12, 20, 0.95)",
-              border: "1px solid rgba(14, 165, 233, 0.2)",
+              bgcolor: "rgba(15, 5, 24, 0.95)",
+              border: "1px solid rgba(139, 92, 246, 0.2)",
               borderRadius: 3,
               p: 4,
               outline: "none",
@@ -69,7 +69,7 @@ const Certificate = ({ ImgSertif, title, issuer }) => {
             </IconButton>
             <Box sx={{ display: "flex", flexDirection: "column", gap: 2, mt: 1 }}>
               <Box sx={{ width: 56, height: 56, borderRadius: 2, background: "linear-gradient(135deg, rgba(14,165,233,0.2), rgba(6,182,212,0.2))", display: "flex", alignItems: "center", justifyContent: "center", border: "1px solid rgba(14,165,233,0.3)" }}>
-                <svg style={{ width: 28, height: 28, color: "#38bdf8" }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg style={{ width: 28, height: 28, color: "#a78bfa" }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </Box>
@@ -77,7 +77,7 @@ const Certificate = ({ ImgSertif, title, issuer }) => {
                 {title || "Certificate"}
               </Typography>
               <Typography sx={{ color: "#94a3b8", fontSize: 14 }}>
-                Issued by: <span style={{ color: "#38bdf8" }}>{issuer || "Certification Authority"}</span>
+                Issued by: <span style={{ color: "#a78bfa" }}>{issuer || "Certification Authority"}</span>
               </Typography>
               <Typography sx={{ color: "#64748b", fontSize: 12, mt: 1 }}>
                 This certificate verifies professional competency in the subject area.

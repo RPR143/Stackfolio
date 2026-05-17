@@ -72,12 +72,12 @@ const educationData = [
 
 const TimelineNode = ({ item, index, isVisible, theme }) => {
   const isSky = theme === "sky";
-  const colorText = isSky ? "text-sky-400" : "text-emerald-400";
-  const colorBg = isSky ? "bg-sky-500" : "bg-emerald-500";
-  const colorBorder = isSky ? "border-sky-400/30" : "border-emerald-400/30";
+  const colorText = isSky ? "text-violet-400" : "text-emerald-400";
+  const colorBg = isSky ? "bg-violet-500" : "bg-emerald-500";
+  const colorBorder = isSky ? "border-violet-400/30" : "border-emerald-400/30";
   const colorGlow = isSky ? "shadow-[0_0_15px_rgba(14,165,233,0.8)]" : "shadow-[0_0_15px_rgba(16,185,129,0.8)]";
-  const badgeColors = isSky ? "bg-sky-500/10 text-sky-400 border-sky-500/20" : "bg-emerald-500/10 text-emerald-400 border-emerald-500/20";
-  const gradientBg = isSky ? "from-sky-500/5 to-transparent" : "from-emerald-500/5 to-transparent";
+  const badgeColors = isSky ? "bg-violet-500/10 text-violet-400 border-violet-500/20" : "bg-emerald-500/10 text-emerald-400 border-emerald-500/20";
+  const gradientBg = isSky ? "from-violet-500/5 to-transparent" : "from-emerald-500/5 to-transparent";
 
   return (
     <div
@@ -209,13 +209,13 @@ const TimelineColumn = ({ title, data, icon: Icon, theme }) => {
   }, []);
 
   const isSky = theme === "sky";
-  const gradientLine = isSky ? "from-sky-400 via-cyan-400" : "from-emerald-400 via-teal-400";
-  const iconColor = isSky ? "text-sky-400" : "text-emerald-400";
+  const gradientLine = isSky ? "from-violet-400 via-fuchsia-400" : "from-emerald-400 via-teal-400";
+  const iconColor = isSky ? "text-violet-400" : "text-emerald-400";
 
   return (
     <div className="flex flex-col h-[600px] w-full">
       {/* Column Header */}
-      <div className="flex items-center gap-3 mb-6 sticky top-0 bg-[#020c14]/90 backdrop-blur-md z-20 py-4 px-2">
+      <div className="flex items-center gap-3 mb-6 sticky top-0 bg-[#0f0518]/90 backdrop-blur-md z-20 py-4 px-2">
         <div className={`p-3 rounded-xl bg-white/5 border border-white/10 ${iconColor}`}>
            <Icon className="w-6 h-6" />
         </div>
@@ -264,16 +264,16 @@ const TimelineColumn = ({ title, data, icon: Icon, theme }) => {
 
 const Timeline = () => {
   return (
-    <section className="relative py-20 bg-[#020c14] overflow-hidden min-h-screen" id="Experience">
+    <section className="relative py-20 bg-[#0f0518] overflow-hidden min-h-screen" id="Experience">
       {/* Background Starfield/Particles */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute w-96 h-96 bg-emerald-500/5 rounded-full blur-[100px] top-1/4 -left-20" />
-        <div className="absolute w-96 h-96 bg-sky-500/5 rounded-full blur-[100px] bottom-1/4 -right-20" />
+        <div className="absolute w-96 h-96 bg-violet-500/5 rounded-full blur-[100px] bottom-1/4 -right-20" />
       </div>
 
       <div className="container mx-auto px-[5%] relative z-10">
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#0ea5e9] to-[#06b6d4] inline-block mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#8b5cf6] to-[#d946ef] inline-block mb-4">
             Professional Journey
           </h2>
           <p className="text-slate-400 max-w-2xl mx-auto text-base md:text-lg">
