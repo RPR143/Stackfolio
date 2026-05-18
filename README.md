@@ -1,18 +1,18 @@
-# 🚀 Rohit Pandey — Personal Portfolio
+# 🚀 Nishant Pandey — Personal Portfolio
 
 > A modern, responsive portfolio website built with React.js + Vite, showcasing my skills, projects, certifications, and professional experience.
 
-[![Live Demo](https://img.shields.io/badge/Live-Demo-0ea5e9?style=for-the-badge)](https://github.com/RPR143)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/rohit-pandey143/)
-[![GitHub](https://img.shields.io/badge/GitHub-RPR143-333?style=for-the-badge&logo=github)](https://github.com/RPR143)
+[![Live Demo](https://img.shields.io/badge/Live-Demo-0ea5e9?style=for-the-badge)](https://github.com/nishantpandey)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin)](https://linkedin.com/in/nishant-pandey425/)
+[![GitHub](https://img.shields.io/badge/GitHub-nishantpandey-333?style=for-the-badge&logo=github)](https://github.com/nishantpandey)
 
 ---
 
 ## 👨‍💻 About
 
-**Rohit Pandey** — Software Developer | Full Stack Developer | Java Developer
+**Nishant Pandey** — Software Engineer | Full Stack Developer
 
-Apprentice at **American Express** with hands-on experience in agile development, RESTful APIs, and customer-facing web applications. Proficient in Java, JavaScript, Python, React.js, Node.js, Spring Boot, MongoDB, and SQL — focused on building scalable and reliable solutions.
+I am a passionate Software Engineer with hands-on expertise in developing end-to-end web applications. With a strong foundation in Java, React.js, Node.js, and Python, I specialize in building scalable web applications and optimizing database architectures. I thrive in agile environments where continuous learning and problem-solving drive meaningful impact.
 
 ---
 
@@ -28,7 +28,7 @@ Apprentice at **American Express** with hands-on experience in agile development
 - 🔍 **SEO Optimized** — Full meta tags, Open Graph, Twitter cards
 - 🔗 **Social Links** — LinkedIn & GitHub integration
 - 🏗️ **Project Showcase** — Uniform cards with direct GitHub repository links
-- 🏆 **Certificates Section** — Symmetrical, beautiful gallery of 30+ certificates
+- 🏆 **Certificates Section** — Symmetrical, beautiful gallery of certificates
 - 💡 **Tech Stack Visualization** — Dynamic icon grid rendering devicons
 
 ---
@@ -38,9 +38,9 @@ Apprentice at **American Express** with hands-on experience in agile development
 | Category | Technologies |
 |----------|-------------|
 | **Frontend** | React.js 18, Vite, Tailwind CSS |
-| **Backend/DB (Skills)** | Java, Node.js, Python, Spring Boot, Express, MongoDB, SQL |
+| **Backend/DB (Skills)** | Java, Node.js, Python, Express, MongoDB, SQL |
 | **Animations** | Framer Motion, AOS, CSS Transitions |
-| **UI Components** | Material UI, Lucide React, Lottie |
+| **UI Components** | Material UI, Lucide React |
 | **Contact** | EmailJS |
 | **Routing** | React Router DOM v6 |
 | **Deployment** | Vercel / Netlify |
@@ -72,9 +72,9 @@ src/
 ├── main.jsx
 └── index.css
 public/
-├── rohit-profile.png       # Professional profile photo
-├── rohit-resume.pdf        # Downloadable CV
-├── certificates/           # Directory containing 31 certification images
+├── nishant-profile.jpeg    # Professional profile photo
+├── Nishant_Pandey.pdf      # Downloadable CV
+├── certificates/           # Directory containing certification images
 └── project-*.png           # Various project preview images
 ```
 
@@ -88,7 +88,7 @@ public/
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/RPR143/portfolio.git
+git clone https://github.com/nishantpandey/portfolio.git
 cd portfolio
 ```
 
@@ -148,9 +148,9 @@ npm run build
 
 ## 📬 Contact
 
-**Rohit Pandey**
-- 💼 LinkedIn: [linkedin.com/in/rohit-pandey143](https://www.linkedin.com/in/rohit-pandey143/)
-- 🐙 GitHub: [github.com/RPR143](https://github.com/RPR143)
+**Nishant Pandey**
+- 💼 LinkedIn: [linkedin.com/in/nishant-pandey425](https://linkedin.com/in/nishant-pandey425/)
+- 🐙 GitHub: [github.com/nishantpandey](https://github.com/nishantpandey)
 
-<p align="center">Made with ❤️ by <strong>Rohit Pandey</strong></p>
+<p align="center">Made with ❤️ by <strong>Nishant Pandey</strong></p>
 #
