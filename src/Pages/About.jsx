@@ -1,4 +1,4 @@
-import React, { useEffect, memo, useMemo } from "react";
+import React, { useEffect, memo, useMemo, useState } from "react";
 import {
   FileText,
   Code,
@@ -9,6 +9,7 @@ import {
 } from "lucide-react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { experienceData, calculateTotalExperienceYears } from "../components/Timeline";
 
 const Header = memo(() => (
   <div className="text-center lg:mb-8 mb-2 px-[5%]">
@@ -114,6 +115,32 @@ const StatCard = memo(
 );
 
 const AboutPage = () => {
+  const [yearsExp, setYearsExp] = useState(() => calculateTotalExperienceYears(experienceData));
+
+  useEffect(() => {
+    const updateExperience = () => {
+      setYearsExp(calculateTotalExperienceYears(experienceData));
+    };
+    updateExperience();
+
+    // Recalculate daily at midnight
+    const now = new Date();
+    const midnight = new Date(now);
+    midnight.setHours(24, 0, 0, 0);
+    const msUntilMidnight = midnight - now;
+
+    let intervalId;
+    const timerId = setTimeout(() => {
+      updateExperience();
+      intervalId = setInterval(updateExperience, 1000 * 60 * 60 * 24);
+    }, msUntilMidnight);
+
+    return () => {
+      clearTimeout(timerId);
+      if (intervalId) clearInterval(intervalId);
+    };
+  }, []);
+
   const statsData = useMemo(
     () => [
       {
@@ -135,13 +162,13 @@ const AboutPage = () => {
       {
         icon: Globe,
         color: "from-[#0ea5e9] to-[#06b6d4]",
-        value: "1.3+",
+        value: yearsExp,
         label: "Years Experience",
         description: "Continuous learning & growth",
         animation: "fade-left",
       },
     ],
-    []
+    [yearsExp]
   );
 
   useEffect(() => {
@@ -193,9 +220,10 @@ const AboutPage = () => {
             >
               I am a passionate Software Developer currently working as an Apprentice at{" "}
               <span className="text-cyan-400 font-semibold">American Express</span>. With a strong
-              foundation in Java, React.js, Python, and Node.js, I specialize in building scalable web applications,
-              developing robust RESTful APIs, and creating intuitive user experiences. My expertise spans both frontend
-              and backend development, utilizing tools like Spring Boot, Express, MongoDB, and SQL. I thrive in agile
+              foundation in Python, JavaScript, React.js, and SQL, I specialize in building scalable web applications,
+              developing robust RESTful APIs, and creating intuitive user experiences. My expertise spans backend
+              migration, distributed tracing, automated testing (20,000+ lines), and engineering workflow automation
+              using tools like FastAPI, Git, Postman, and Jira. I thrive in agile
               environments where continuous learning and problem-solving drive meaningful impact.
             </p>
 
