@@ -99,22 +99,21 @@ function a11yProps(index) {
 
 // Rohit's actual tech stack from resume
 const techStacks = [
-  { icon: "html.svg", language: "HTML" },
-  { icon: "css.svg", language: "CSS" },
+  { icon: "html.svg", language: "HTML5" },
+  { icon: "css.svg", language: "CSS3" },
   { icon: "javascript.svg", language: "JavaScript" },
-  { icon: "reactjs.svg", language: "ReactJS" },
-  { icon: "nodejs.svg", language: "Node.js" },
-  { icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg", language: "Java" },
+  { icon: "reactjs.svg", language: "React.js" },
   { icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg", language: "Python" },
-  { icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg", language: "Spring Boot" },
-  { icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg", language: "Express" },
-  { icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg", language: "MongoDB" },
-  { icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg", language: "SQL" },
-  { icon: "tailwind.svg", language: "Tailwind CSS" },
-  { icon: "MUI.svg", language: "Material UI" },
-  { icon: "vite.svg", language: "Vite" },
+  { icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg", language: "NumPy" },
+  { icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg", language: "Pandas" },
+  { icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg", language: "FastAPI" },
+  { icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg", language: "MySQL" },
   { icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg", language: "Git" },
   { icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg", language: "GitHub" },
+  { icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg", language: "Jira" },
+  { icon: "tailwind.svg", language: "Tailwind CSS" },
+  { icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg", language: "Postman" },
+  { icon: "vite.svg", language: "Vite" },
 ];
 
 export default function FullWidthTabs() {

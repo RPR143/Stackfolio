@@ -1,28 +1,29 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Briefcase, GraduationCap } from "lucide-react";
 
-const calculateExperienceDuration = (dateString) => {
+const calculateExperienceDuration = (dateString, live = false) => {
   const [startStr, endStr] = dateString.split(" - ");
   if (!startStr || !endStr) return "";
-  
+
   const start = new Date(startStr);
-  const end = endStr.toLowerCase() === "present" ? new Date() : new Date(endStr);
-  
+  const isPresent = endStr.toLowerCase() === "present";
+  const end = isPresent ? new Date() : new Date(endStr);
+
   let years = end.getFullYear() - start.getFullYear();
   let months = end.getMonth() - start.getMonth();
   let days = end.getDate() - start.getDate();
-  
+
   if (days < 0) {
     months -= 1;
     const prevMonth = new Date(end.getFullYear(), end.getMonth(), 0);
     days += prevMonth.getDate();
   }
-  
+
   if (months < 0) {
     years -= 1;
     months += 12;
   }
-  
+
   if (years > 0) {
     return `${years} year${years !== 1 ? 's' : ''}-${months} month${months !== 1 ? 's' : ''}-${days} day${days !== 1 ? 's' : ''}`;
   } else {
@@ -30,33 +31,104 @@ const calculateExperienceDuration = (dateString) => {
   }
 };
 
+// Hook to get a live-updating duration string for "Present" roles
+const useLiveDuration = (dateString, isLive = true) => {
+  const isPresent = dateString.toLowerCase().includes("present");
+  const shouldLiveUpdate = isPresent && isLive;
+  const [duration, setDuration] = useState(() => calculateExperienceDuration(dateString));
+
+  useEffect(() => {
+    if (!shouldLiveUpdate) return;
+    // Update every day at midnight, but also recalculate immediately
+    setDuration(calculateExperienceDuration(dateString));
+
+    const getMsUntilMidnight = () => {
+      const now = new Date();
+      const midnight = new Date(now);
+      midnight.setHours(24, 0, 0, 0);
+      return midnight - now;
+    };
+
+    let dailyTimer;
+    const scheduleDailyUpdate = () => {
+      dailyTimer = setTimeout(() => {
+        setDuration(calculateExperienceDuration(dateString));
+        scheduleDailyUpdate();
+      }, getMsUntilMidnight());
+    };
+
+    scheduleDailyUpdate();
+    return () => clearTimeout(dailyTimer);
+  }, [dateString, shouldLiveUpdate]);
+
+  return duration;
+};
+
 // Experience data - Reverse Chronological Order
-const experienceData = [
+export const experienceData = [
   {
     id: "01",
     year: "19 January 2026 - Present",
-    duration: calculateExperienceDuration("19 January 2026 - Present"),
+    isLive: true,
     title: "Apprentice",
     institution: "American Express",
-    description: "Working on scalable web applications and RESTful APIs using Java, React.js, and Node.js. Contributing to agile development and customer-facing interfaces.",
+    description: "Upgraded a backend service to the latest major framework version and migrated distributed tracing from OpenTracing to OpenTelemetry. Automated 5 engineering workflows (PR creation/review and Jira ticket creation, review, and fix). Delivered real-time vulnerability reports across 50+ tracked services. Raised test coverage of an event-driven backend module from 20% to 100% by writing 20,000+ lines of automated tests using the Reflection API.",
   },
   {
     id: "02",
     year: "9 January 2025 - 19 November 2025",
-    duration: calculateExperienceDuration("9 January 2025 - 19 November 2025"),
+    isLive: false,
     title: "Frontend Developer",
     institution: "Indian Infotech",
-    description: "Developed and optimized responsive user interfaces using React.js and modern CSS frameworks. Improved application performance and collaborated with design teams.",
+    description: "Built 10+ reusable React.js components for scalable, responsive UIs using HTML5, CSS3, and JavaScript. Shipped features across 10+ Agile sprint releases by integrating 8+ REST APIs in collaboration with cross-functional teams. Ensured reliable data flow across integrated REST APIs by testing each endpoint in Postman before connecting to React components.",
   },
   {
     id: "03",
     year: "10 April 2022 - 10 June 2022",
-    duration: calculateExperienceDuration("10 April 2022 - 10 June 2022"),
+    isLive: false,
     title: "Artificial Intelligence Intern",
     institution: "Acmegrade",
-    description: "Assisted in training and evaluating machine learning models. Built data preprocessing pipelines using Python and pandas for computer vision and NLP tasks.",
+    description: "Achieved 90% prediction accuracy by training a Python ML model with NumPy, Pandas, and Scikit-learn. Improved model input quality across 1,000+ records by performing data preprocessing and feature engineering. Verified the model's 90% accuracy by evaluating its predictions on test data using Scikit-learn.",
   }
 ];
+
+// Helper to calculate total cumulative experience across all items in experienceData
+export const calculateTotalExperienceYears = (experiences = experienceData) => {
+  let totalMonths = 0;
+
+  experiences.forEach((item) => {
+    const [startStr, endStr] = item.year.split(" - ");
+    if (!startStr || !endStr) return;
+
+    const start = new Date(startStr);
+    const isPresent = endStr.toLowerCase() === "present";
+    const end = (isPresent && item.isLive !== false)
+      ? new Date()
+      : (isPresent && item.endDate ? new Date(item.endDate) : (isPresent ? new Date() : new Date(endStr)));
+
+    if (isNaN(start.getTime()) || isNaN(end.getTime())) return;
+
+    let y = end.getFullYear() - start.getFullYear();
+    let m = end.getMonth() - start.getMonth();
+    let d = end.getDate() - start.getDate();
+
+    if (d < 0) {
+      m -= 1;
+      const prevMonth = new Date(end.getFullYear(), end.getMonth(), 0);
+      d += prevMonth.getDate();
+    }
+    if (m < 0) {
+      y -= 1;
+      m += 12;
+    }
+
+    const months = y * 12 + m + (d / 30);
+    totalMonths += Math.max(0, months);
+  });
+
+  const years = totalMonths / 12;
+  return `${years.toFixed(1)}+`;
+};
 
 // Education data - Reverse Chronological Order
 const educationData = [
@@ -64,9 +136,9 @@ const educationData = [
     id: "01",
     year: "2020 - 2024",
     duration: "4 yrs",
-    title: "B.Tech in Computer Science",
-    institution: "UCEM Allahabad",
-    description: "Graduated with a CGPA of 7.99/10. Built a strong foundation in data structures, algorithms, and software engineering principles.",
+    title: "B.Tech in Computer Science & Engineering",
+    institution: "United College of Engineering & Management, Allahabad",
+    description: "Graduated with a CGPA of 7.99/10. Earned a Certificate of Excellence in the Computer Science department. Built a strong foundation in data structures, algorithms, and software engineering principles.",
   },
   {
     id: "02",
@@ -94,6 +166,10 @@ const TimelineNode = ({ item, index, isVisible, theme }) => {
   const colorGlow = isSky ? "shadow-[0_0_15px_rgba(14,165,233,0.8)]" : "shadow-[0_0_15px_rgba(16,185,129,0.8)]";
   const badgeColors = isSky ? "bg-sky-500/10 text-sky-400 border-sky-500/20" : "bg-emerald-500/10 text-emerald-400 border-emerald-500/20";
   const gradientBg = isSky ? "from-sky-500/5 to-transparent" : "from-emerald-500/5 to-transparent";
+
+  // Live-updating duration for "Present" roles; static for completed ones
+  const liveDuration = useLiveDuration(item.year, item.isLive);
+  const displayDuration = item.isLive ? liveDuration : (item.duration || calculateExperienceDuration(item.year));
 
   return (
     <div
@@ -146,10 +222,10 @@ const TimelineNode = ({ item, index, isVisible, theme }) => {
             <span className={`px-3 py-1 rounded-full font-semibold uppercase tracking-wider border ${badgeColors}`}>
               {item.year}
             </span>
-            {item.duration && (
+            {displayDuration && (
               <span className="text-slate-400 font-medium flex items-center gap-2">
                 <div className="w-1.5 h-1.5 rounded-full bg-slate-600" />
-                {item.duration}
+                {displayDuration}
               </span>
             )}
           </div>

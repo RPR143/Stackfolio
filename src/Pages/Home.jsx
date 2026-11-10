@@ -93,8 +93,8 @@ const SocialLink = memo(({ icon: Icon, link, label }) => (
 const TYPING_SPEED = 100;
 const ERASING_SPEED = 50;
 const PAUSE_DURATION = 2000;
-const WORDS = ["Full Stack Developer", "Java Developer", "React.js Enthusiast", "Problem Solver"];
-const TECH_STACK = ["Java", "React.js", "Node.js", "Python", "SQL"];
+const WORDS = ["Full Stack Developer", "Python Developer", "React.js Enthusiast", "Problem Solver"];
+const TECH_STACK = ["Python", "React.js", "JavaScript", "SQL", "FastAPI"];
 const SOCIAL_LINKS = [
   { icon: Github, link: "https://github.com/RPR143", label: "GitHub" },
   { icon: Linkedin, link: "https://www.linkedin.com/in/rohit-pandey143/", label: "LinkedIn" },
@@ -212,9 +212,9 @@ const Home = () => {
                   data-aos="fade-up"
                   data-aos-delay="1000"
                 >
-                  Apprentice at American Express — building scalable, reliable web applications
-                  with Java, React.js, and Node.js. Passionate about clean code,
-                  APIs, and delivering great user experiences.
+                  Apprentice at American Express — building scalable, reliable backend services
+                  with Python, JavaScript, and React.js. Passionate about clean code,
+                  API automation, and delivering great user experiences.
                 </p>
 
                 {/* Tech Stack */}
